@@ -3,11 +3,11 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev --turbopack",
+    "dev": "node api.js && next dev --turbopack",
     "buildup": "cross-env NODE_ENV=production next build",
     "startup": "cross-env NODE_ENV=production node server.mjs",
-    "build": "next build",
-    "start": "next start",
+    "build": "node api.js && next build",
+    "start": "node api.js && next start",
     "lint": "next lint",
     "export": "cross-env NODE_ENV=production BUILD_STATIC=true next build"
   },
